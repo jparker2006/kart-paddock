@@ -1,0 +1,68 @@
+{
+  "updatedAt": "2026-09-07T18:46:37.103605+00:00",
+  "status": "DEPLOYED_AND_SMOKE_TESTED",
+  "privateRepository": "https://github.com/jparker2006/kart-paddock",
+  "vercelDeployed": true,
+  "renderServicesCreated": true,
+  "verified": [
+    "Clean installs and production builds for both games",
+    "62 deployment source/config files match frozen manifests",
+    "Desktop launcher visual review",
+    "Builder reveal and hide",
+    "Parcel Panic iframe loads at nested game path",
+    "Both public Render health endpoints return game-specific success JSON",
+    "Three browser clients joined each game via public Vercel frontend",
+    "Both games started a race with three connected players",
+    "Reloaded client resumed existing race seat in both games"
+  ],
+  "pending": [],
+  "paidServicesProvisioned": false,
+  "url": "https://kart-paddock.vercel.app",
+  "publicArtifactChecks": {
+    "index.html": {
+      "matchesLocal": true,
+      "bytes": 3984
+    },
+    "style.css": {
+      "matchesLocal": true,
+      "bytes": 3968
+    },
+    "play/a/index.html": {
+      "matchesLocal": true,
+      "bytes": 553
+    },
+    "play/b/index.html": {
+      "matchesLocal": true,
+      "bytes": 553
+    },
+    "games/a/index.html": {
+      "matchesLocal": true,
+      "bytes": 663
+    },
+    "games/b/index.html": {
+      "matchesLocal": true,
+      "bytes": 764
+    }
+  },
+  "backends": {
+    "a": {
+      "url": "https://kart-paddock-a.onrender.com",
+      "serviceId": "srv-dafg9e8u01pc73abib80",
+      "deployId": "dep-dafg9egu01pc73abicg0",
+      "plan": "free"
+    },
+    "b": {
+      "url": "https://kart-paddock-b.onrender.com",
+      "serviceId": "srv-dafgammq1p3s73bkn8gg",
+      "deployId": "dep-dafgamuq1p3s73bkn9f0",
+      "plan": "free"
+    }
+  },
+  "sourceCommit": "33102cc5b7c85f2c2d970d382d10f8eadd59c22b",
+  "limitations": [
+    "Smoke tests used three browser tabs on one Mac, not three physical computers",
+    "No complete human-driven race or latency benchmark performed",
+    "Fable briefly displayed stale-update warning during startup; it cleared and race updates/rejoin succeeded",
+    "Render Free may idle, cold-start, restart, or hit shared free limits"
+  ]
+}
