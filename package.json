@@ -1,0 +1,8 @@
+{
+  "name": "kart-paddock",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assemble": "node scripts/assemble.mjs"
+  }
+}

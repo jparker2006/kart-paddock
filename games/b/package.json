@@ -1,0 +1,35 @@
+{
+  "name": "bumble-rally",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bumble Rally - a browser-based online 3D kart racing game (static client + persistent Node backend).",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c blue,yellow \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "tsx watch src/server/index.ts",
+    "dev:client": "vite",
+    "typecheck": "tsc -p tsconfig.client.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "build": "npm run typecheck && npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "start": "node dist/server/server/index.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/node": "24.13.3",
+    "@types/three": "0.185.4",
+    "socket.io": "4.8.3",
+    "socket.io-client": "4.8.3",
+    "three": "0.185.1",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "10.0.5",
+    "tsx": "4.23.13"
+  }
+}

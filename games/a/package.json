@@ -1,0 +1,35 @@
+{
+  "name": "parcel-panic",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.20.0",
+    "npm": "11.19.0"
+  },
+  "packageManager": "npm@11.19.0",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc --noEmit -p tsconfig.json && tsc -p tsconfig.server.json && vite build",
+    "start": "node --env-file-if-exists=.env dist/server/server/index.js",
+    "preview": "vite preview",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "node tests/browser.mjs",
+    "test:network": "node tests/network.mjs",
+    "test:deployment": "node tests/deployment.mjs",
+    "test:effects": "node tests/effects.mjs"
+  },
+  "dependencies": {
+    "three": "0.185.1",
+    "socket.io": "4.8.3",
+    "socket.io-client": "4.8.3"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "@types/three": "0.185.4",
+    "@types/node": "26.4.1",
+    "tsx": "4.23.13",
+    "playwright": "1.63.0"
+  }
+}
