@@ -3,5 +3,5 @@ button.addEventListener('click', () => {
   const revealed = button.getAttribute('aria-pressed') !== 'true';
   button.setAttribute('aria-pressed', String(revealed));
   button.innerHTML = revealed ? 'Hide models <span aria-hidden="true">↑</span>' : 'Reveal models <span aria-hidden="true">↓</span>';
-  for (const id of ['model-a', 'model-b', 'run-notes']) document.getElementById(id).hidden = !revealed;
+  for (const id of ['model-a', 'model-b', 'model-c', 'run-notes']) document.getElementById(id).hidden = !revealed;
 });

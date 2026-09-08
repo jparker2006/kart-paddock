@@ -1,8 +1,8 @@
 # Kart Paddock
 
-A small two-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
+A small three-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
 
-The games are copies of the frozen Astra and Fable submissions. No gameplay code is modified. The static Vercel output contains only the launcher and compiled clients; source, run records, and backend code are not uploaded to the public site.
+The games are copies of the frozen Astra, Fable, and GLM submissions. No gameplay code is modified. The static Vercel output contains only the launcher and compiled clients; source, run records, and backend code are not uploaded to the public site.
 
 ## Deployment
 
@@ -33,3 +33,9 @@ Official hosting references: [Render WebSockets](https://render.com/docs/websock
 The cards use screenshots copied from the original runs. Reveal models shows elapsed time, total tokens, and estimated standard API cost, with cache accounting and pricing sources under About these numbers. Estimates are not subscription invoices. Run metrics come from the organizer record `../experiment-notes/RUN-USAGE.json`.
 
 For launcher-only changes, run `npm run assemble` and then `vercel deploy --prebuilt --prod --yes --scope jparker2006s-projects`. This preserves existing game builds. The September 7 redesign checked 65 game source and compiled-file hashes unchanged and verified all 14 published artifacts against local output. Current deployment details are in DEPLOYMENT-STATUS.json.
+
+## Harvest Rush
+
+GLM-5.3-Flash via OpenCode 1.18.29/OpenRouter, High. Added at `/play/c/` and `/games/c/`; backend https://kart-paddock-c.onrender.com. Source commit `3750dca4aadc25ee34aa7f7639984748fada4e47` is frozen unchanged. Its screenshot is from the original run. Include `GAME_C_SERVER_URL` when rebuilding all games.
+
+GLM reveals 71.49M tokens, $1.78 OpenCode-recorded cost (not invoice verified), and 5h 26m adjusted elapsed. Detail notes disclose two continuation prompts and exclude an evidenced permission wait including overnight low-power sleep; ordinary testing remains included. This cost differs in basis from Astra/Fable API estimates. Deployment checks and limitations are recorded in DEPLOYMENT-STATUS.json.

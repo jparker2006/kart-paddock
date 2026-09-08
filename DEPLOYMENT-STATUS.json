@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T06:20:31.945005+00:00",
+  "updatedAt": "2026-09-08T23:37:09.115502+00:00",
   "status": "DEPLOYED_AND_SMOKE_TESTED",
   "privateRepository": "https://github.com/jparker2006/kart-paddock",
   "vercelDeployed": true,
@@ -21,15 +21,23 @@
   "publicArtifactChecks": {
     "index.html": {
       "matchesLocal": true,
-      "bytes": 3952
+      "bytes": 5773
+    },
+    "prompt.md": {
+      "matchesLocal": true,
+      "bytes": 9628
     },
     "style.css": {
       "matchesLocal": true,
-      "bytes": 6484
+      "bytes": 6869
     },
     "reveal.js": {
       "matchesLocal": true,
-      "bytes": 460
+      "bytes": 471
+    },
+    "prompt/index.html": {
+      "matchesLocal": true,
+      "bytes": 10952
     },
     "assets/parcel-panic.png": {
       "matchesLocal": true,
@@ -39,17 +47,17 @@
       "matchesLocal": true,
       "bytes": 760642
     },
-    "play/a/index.html": {
+    "assets/harvest-rush.png": {
       "matchesLocal": true,
-      "bytes": 553
-    },
-    "play/b/index.html": {
-      "matchesLocal": true,
-      "bytes": 553
+      "bytes": 633353
     },
     "games/a/index.html": {
       "matchesLocal": true,
       "bytes": 663
+    },
+    "games/c/index.html": {
+      "matchesLocal": true,
+      "bytes": 6153
     },
     "games/b/index.html": {
       "matchesLocal": true,
@@ -67,6 +75,14 @@
       "matchesLocal": true,
       "bytes": 676024
     },
+    "games/c/assets/index-B1jg0i9v.css": {
+      "matchesLocal": true,
+      "bytes": 10239
+    },
+    "games/c/assets/index-BI1HGqq5.js": {
+      "matchesLocal": true,
+      "bytes": 641080
+    },
     "games/a/assets/index-CyTwUxOK.js": {
       "matchesLocal": true,
       "bytes": 628539
@@ -75,13 +91,17 @@
       "matchesLocal": true,
       "bytes": 11797
     },
-    "prompt/index.html": {
+    "play/a/index.html": {
       "matchesLocal": true,
-      "bytes": 10952
+      "bytes": 553
     },
-    "prompt.md": {
+    "play/c/index.html": {
       "matchesLocal": true,
-      "bytes": 9628
+      "bytes": 553
+    },
+    "play/b/index.html": {
+      "matchesLocal": true,
+      "bytes": 553
     }
   },
   "backends": {
@@ -96,6 +116,13 @@
       "serviceId": "srv-dafgammq1p3s73bkn8gg",
       "deployId": "dep-dafgamuq1p3s73bkn9f0",
       "plan": "free"
+    },
+    "c": {
+      "url": "https://kart-paddock-c.onrender.com",
+      "serviceId": "srv-dag9m315efls73a1f46g",
+      "deployId": "dep-dag9m3h5efls73a1f51g",
+      "plan": "free",
+      "sourceCommit": "004ec5ee0ba0c25088b17527314983e96fa70dd4"
     }
   },
   "sourceCommit": "33102cc5b7c85f2c2d970d382d10f8eadd59c22b",
@@ -105,7 +132,7 @@
     "Fable briefly displayed stale-update warning during startup; it cleared and race updates/rejoin succeeded",
     "Render Free may idle, cold-start, restart, or hit shared free limits"
   ],
-  "launcherDeploymentId": "dpl_B27jY6DbiksnoP2fQoaUpifWXsrQ",
+  "launcherDeploymentId": "dpl_Ca66KtAFG1fNGMpy2QL63jGm9f7g",
   "launcherRedesign": {
     "gameFilesHashChecked": 65,
     "gameFilesChanged": 0,
@@ -116,5 +143,26 @@
       "Public static assets byte-match local output"
     ],
     "screenshots": "Copied from each original model run; no game source edits"
+  },
+  "harvestRush": {
+    "frozenSourceFiles": 38,
+    "changedSourceFiles": 0,
+    "screenshotSource": "Original run artifact /tmp/hr-final-race.png",
+    "verified": [
+      "npm ci and explicit typecheck",
+      "Production build at /games/c/",
+      "Public health endpoint",
+      "Three browser tabs joined GJTS and started race",
+      "Third client reload resumed same race seat",
+      "Separate room 6QSK stayed isolated",
+      "Framed game loads",
+      "Three-card desktop layout and reveal metrics",
+      "All public artifacts match local output"
+    ],
+    "limitations": [
+      "Three tabs on one Mac; not three physical computers",
+      "No complete human-driven race or latency benchmark",
+      "Responsive override returned 1280px; phone viewport not independently verified"
+    ]
   }
 }
