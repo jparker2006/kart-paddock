@@ -33,3 +33,20 @@ services:
         value: 0.0.0.0
       - key: ALLOWED_ORIGINS
         sync: false
+  - type: web
+    name: kart-paddock-c
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: games/c
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: off
+    envVars:
+      - key: NODE_VERSION
+        value: 24.20.0
+      - key: HOST
+        value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        sync: false
