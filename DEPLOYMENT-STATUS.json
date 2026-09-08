@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T06:16:43.322311+00:00",
+  "updatedAt": "2026-09-08T06:20:31.945005+00:00",
   "status": "DEPLOYED_AND_SMOKE_TESTED",
   "privateRepository": "https://github.com/jparker2006/kart-paddock",
   "vercelDeployed": true,
@@ -25,7 +25,7 @@
     },
     "style.css": {
       "matchesLocal": true,
-      "bytes": 5331
+      "bytes": 6484
     },
     "reveal.js": {
       "matchesLocal": true,
@@ -77,7 +77,7 @@
     },
     "prompt/index.html": {
       "matchesLocal": true,
-      "bytes": 10330
+      "bytes": 10952
     },
     "prompt.md": {
       "matchesLocal": true,
@@ -105,7 +105,7 @@
     "Fable briefly displayed stale-update warning during startup; it cleared and race updates/rejoin succeeded",
     "Render Free may idle, cold-start, restart, or hit shared free limits"
   ],
-  "launcherDeploymentId": "dpl_HovBRDKGAEGTit71ryYnURdZ6Rki",
+  "launcherDeploymentId": "dpl_B27jY6DbiksnoP2fQoaUpifWXsrQ",
   "launcherRedesign": {
     "gameFilesHashChecked": 65,
     "gameFilesChanged": 0,
