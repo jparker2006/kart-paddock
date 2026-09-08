@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T18:46:37.103605+00:00",
+  "updatedAt": "2026-09-08T06:10:12.564408+00:00",
   "status": "DEPLOYED_AND_SMOKE_TESTED",
   "privateRepository": "https://github.com/jparker2006/kart-paddock",
   "vercelDeployed": true,
@@ -21,11 +21,23 @@
   "publicArtifactChecks": {
     "index.html": {
       "matchesLocal": true,
-      "bytes": 3984
+      "bytes": 3754
     },
     "style.css": {
       "matchesLocal": true,
-      "bytes": 3968
+      "bytes": 4843
+    },
+    "reveal.js": {
+      "matchesLocal": true,
+      "bytes": 460
+    },
+    "assets/parcel-panic.png": {
+      "matchesLocal": true,
+      "bytes": 124025
+    },
+    "assets/bumble-rally.png": {
+      "matchesLocal": true,
+      "bytes": 760642
     },
     "play/a/index.html": {
       "matchesLocal": true,
@@ -42,6 +54,26 @@
     "games/b/index.html": {
       "matchesLocal": true,
       "bytes": 764
+    },
+    "games/b/favicon.svg": {
+      "matchesLocal": true,
+      "bytes": 396
+    },
+    "games/b/assets/index-BrnM48s8.css": {
+      "matchesLocal": true,
+      "bytes": 11524
+    },
+    "games/b/assets/index-Dsr1C2jM.js": {
+      "matchesLocal": true,
+      "bytes": 676024
+    },
+    "games/a/assets/index-CyTwUxOK.js": {
+      "matchesLocal": true,
+      "bytes": 628539
+    },
+    "games/a/assets/index-CVno3yKj.css": {
+      "matchesLocal": true,
+      "bytes": 11797
     }
   },
   "backends": {
@@ -64,5 +96,17 @@
     "No complete human-driven race or latency benchmark performed",
     "Fable briefly displayed stale-update warning during startup; it cleared and race updates/rejoin succeeded",
     "Render Free may idle, cold-start, restart, or hit shared free limits"
-  ]
+  ],
+  "launcherDeploymentId": "dpl_9TUxjWzsL3Q3vKgg3km4rMSLhdTj",
+  "launcherRedesign": {
+    "gameFilesHashChecked": 65,
+    "gameFilesChanged": 0,
+    "verified": [
+      "Reveal/hide with exact run metrics",
+      "Narrow layout at actual browser width 582px without horizontal overflow",
+      "Play and return navigation",
+      "Public static assets byte-match local output"
+    ],
+    "screenshots": "Copied from each original model run; no game source edits"
+  }
 }

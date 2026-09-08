@@ -1,6 +1,6 @@
 # Kart Paddock
 
-A small two-game playtest launcher. Builder identities are hidden until Reveal builders is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
+A small two-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
 
 The games are copies of the frozen Astra and Fable submissions. No gameplay code is modified. The static Vercel output contains only the launcher and compiled clients; source, run records, and backend code are not uploaded to the public site.
 
@@ -27,3 +27,9 @@ Game paths: /games/a/ and /games/b/. Framed play views: /play/a/ and /play/b/. I
 Clean installs and production builds passed for both games. Source files in games/ are checked against frozen manifests before deployment. Local launcher layout reviewed in the browser. Deployed gameplay checks are recorded separately once hosting is available.
 
 Official hosting references: [Render WebSockets](https://render.com/docs/websocket), [Render Free](https://render.com/docs/free), [Vercel Build Output API](https://vercel.com/docs/build-output-api).
+
+## Launcher update
+
+The cards use screenshots copied from the original runs. Reveal models shows elapsed time, total tokens, and estimated standard API cost, with cache accounting and pricing sources under About these numbers. Estimates are not subscription invoices. Run metrics come from the organizer record `../experiment-notes/RUN-USAGE.json`.
+
+For launcher-only changes, run `npm run assemble` and then `vercel deploy --prebuilt --prod --yes --scope jparker2006s-projects`. This preserves existing game builds. The September 7 redesign checked 65 game source and compiled-file hashes unchanged and verified all 14 published artifacts against local output. Current deployment details are in DEPLOYMENT-STATUS.json.
