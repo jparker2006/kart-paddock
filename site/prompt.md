@@ -1,0 +1,75 @@
+Build a complete, entertaining, browser-based online 3D kart-racing game from scratch in this empty folder. Create the entire project yourself, including its files, dependency setup, build configuration, browser client, and backend. Aim for the approachable fun of Mario Kart, with your own original theme, track, and presentation. Three people will play together from separate computers; the game must support lobbies of 2–8 human racers.
+
+This is your one starting prompt. Work autonomously through implementation, browser testing, and debugging until you finish. There is no time limit. Do not ask follow-up questions or stop after a plan, prototype, or scaffolding. Make unspecified design choices yourself while satisfying the requirements below. Use the agent's ordinary execution session; do not create a platform-specific persistent goal or an external continuation loop.
+
+## Work only in this project
+
+Treat this as a greenfield folder. There are no starter files, installed project dependencies, or separate requirement documents to read. This prompt contains the complete challenge and integration requirements. Do not inspect parent or sibling projects, previous submissions, archived starters, organizer material, other conversations, or unrelated local source code. Keep your code, dependencies, assets, and verification artifacts in this project. Access to installed tools, official documentation, package registries, and permitted asset sources is allowed.
+
+All AI-generated work must come from the model assigned to this session. Do not call other models or separate AI image/audio generation services. You may use additional software libraries and freely redistributable art/audio assets; create and maintain this project's lockfile and document asset sources and attribution requirements. Do not copy an existing racing game or use a complete kart-game template. Do not provision services, spend money, deploy, publish, or push the repository.
+
+## Set up the project yourself
+
+Use Node 24.20.0, npm 11.19.0, TypeScript 7.0.2, and Vite 8.2.2. Verify the runtime versions in your execution environment. The agreed rendering-library option is Three.js 0.185.1. Optional libraries are @dimforge/rapier3d-compat 0.20.0 and socket.io/socket.io-client 4.8.3. You choose whether and how to use these rendering, physics, and networking libraries. Install the dependencies you choose, pin exact versions, and generate package-lock.json; nothing is preinstalled in the project.
+
+Create your own configuration, source files, README.md, and .env.example. Document setup, commands, controls, configuration, and asset attribution. Keep generated dependencies/build output and real environment files out of version control if you initialize a local Git repository.
+
+## Build a real multiplayer game
+
+Players can enter a name, create a room, and join using a room code or shareable link. Show the people in the lobby. The room's host can start a race with 2–8 human players. A player who joins during a race waits for the next race. Do not require accounts or logins.
+
+Each human controls their own kart, and players see one another racing in real time. Different rooms must remain isolated. Build all room management, race state, synchronization, physics, and gameplay yourself. You may install and use Socket.IO, but it is optional. The game must work with its static browser client and one persistent Node backend, without requiring a database, managed realtime service, or additional credentials.
+
+A brief client disconnection must allow that player to reconnect to the same ongoing race. A full backend restart may lose rooms, but the UI must explain what happened and allow players to start a new room. Clearly communicate connection problems rather than showing a silently stale race.
+
+## Make the race genuinely three-dimensional
+
+Create one original track with elevation changes, at least one jump, and a bridge or overpass crossing above another drivable part of the track. These features must work as physical geometry: players can land from the jump, drive underneath the overpass, and remain on the correct track level. The presentation must be true 3D, not a flat top-down game made to look dimensional.
+
+Every race is three laps. Include acceleration, braking, steering, drifting that earns a boost, collectible items with at least two distinct effects, and a way to respawn after leaving the course or getting stuck. Choose the handling, item effects, camera, controls, visual theme, and track layout yourself. Keyboard controls must be clear and intuitive.
+
+Use checkpoints and accurate lap progression so crossing the finish line incorrectly, moving backward, falling between overlapping track sections, or respawning cannot produce false lap completions. Display current lap and live placements. All players must see consistent race results. Finish with an understandable results screen and an easy rematch flow.
+
+## Make it understandable and enjoyable
+
+Provide clear controls, connection/lobby feedback, a race start, readable racing information, and a finish state. Make other racers and relevant items easy to recognize. Prioritize responsive driving, a readable track, and an enjoyable complete race. Support current desktop Chrome/Edge, Firefox, and Safari with keyboard controls. Keep model/provider names and identity claims out of the player-facing game.
+
+## Implement the integration contract
+
+The browser build will later live beneath an anonymous path within one Vercel website and connect to its separately hosted persistent Node backend, such as a Render Node web service. Implement this deployment boundary from the beginning; do not assume an ordinary in-memory Node server can be moved into a serverless function unchanged. Hosting is a later organizer step. Build your game, not the comparison website.
+
+Create these working commands:
+
+| Command | Required behavior |
+| --- | --- |
+| npm ci | Reproducibly install from your project's lockfile |
+| npm run dev | Run the frontend and backend locally together |
+| npm run build | Type-check and build the static client into dist/client/ and Node backend into dist/server/ |
+| npm start | Run the built Node backend |
+| npm run preview | Serve the built frontend locally for verification |
+
+Implement and document these configuration variables:
+
+| Variable | Stage and meaning |
+| --- | --- |
+| BASE_PATH | Client dev/build; default /; support a nested prefix such as /games/a/ with a trailing slash |
+| VITE_GAME_SERVER_URL | Public client dev/build value; default http://localhost:3001; production HTTPS backend URL |
+| CLIENT_PORT | Local frontend development port; default 5173 |
+| PREVIEW_PORT | Local built-frontend preview port; default 4173 |
+| PORT | Backend runtime port; default 3001; honor the provider's supplied value |
+| HOST | Backend bind address; default 0.0.0.0 |
+| ALLOWED_ORIGINS | Backend runtime; comma-separated permitted browser origins, default http://localhost:5173,http://localhost:4173 |
+
+Keep local ports predictable: report a conflict instead of silently choosing a different port. Implement a lightweight GET /health endpoint that returns HTTP 200 when the backend is ready. Handle permitted HTTP/WebSocket origins for your networking implementation. Production traffic must work over HTTPS/WSS. Keep secrets out of public browser configuration.
+
+Respect the configured base path for every asset, navigation URL, and share link, including textures, models, audio, workers, and WASM where used. Do not hard-code localhost or production hostnames into gameplay. The client must work both at / and at a nested base path. Keep routes and any service-worker scope within the game's base, and namespace browser storage to prevent collisions with other embedded apps.
+
+The later website must be able to open or embed the game without importing or repairing gameplay source. Support both a standalone page and an iframe, including keyboard focus and audio activated by a user gesture. The game owns its lobby and race interface; you choose the room-code/share-link format and networking protocol. No shared room or game-state implementation is supplied. After freezing, the organizer may rebuild with different public configuration and adjust hosting/packaging, but may not repair your lobby, networking, physics, or gameplay code.
+
+## Verify your work before finishing
+
+Run the install/build checks and launch the game. Use the available browser tools to test the actual experience, fix problems, and retest. Exercise at least three independent browser clients together: create/join a lobby, start a race, see synchronized racers, complete three valid laps, see consistent results, and rematch. Check a separate room, brief disconnect/reconnect, checkpoints, respawn behavior, the jump, and the overpass. Check the configured maximum of eight players as far as your tools allow. Verify the production build also works beneath a nested base path.
+
+Report which browsers and multiplayer scenarios you actually tested. Separate verified behavior from untested claims and known limitations; simulated clients are not a substitute for reporting what real browser clients did. You may test locally and over available local network connections. Do not claim production hosting is verified from local tests.
+
+When you are done, give a concise handoff covering what you built, how to run it, controls, checks performed, and known limitations. Your final response ends the submission; the files are then frozen. Do not make follow-up edits. A broken build or incomplete feature must be reported honestly rather than hidden.
