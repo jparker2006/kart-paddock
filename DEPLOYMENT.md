@@ -21,3 +21,11 @@ Game E is the unchanged 39-file frozen Gemini submission. Static assets are comp
 The production launcher includes all five games. Completion times remain in expandable run notes only. Gemini's audit found 43,933,660 total tokens and a $5.375909325 standard API-equivalent token estimate; actual billed cost was not recorded. Muse's recorded cost is $0, with alternative standard ($2.14685385) and Contributor ($0.065432328) estimates shown separately. Rates were checked against official provider documentation on September 9, 2026.
 
 Verified: clean Gemini install/build, public health, nested and framed frontend, three browser tabs sharing a room and starting a race, reload rejoin, and published asset byte matches. Full-race playability and three physical devices remain unverified. Original game defects are retained.
+
+## Game loading screen — September 9, 2026
+
+All five `/play/<game>/` wrappers wait for a successful backend health response before loading the original iframe. The screen explains the roughly one-minute free-server wakeup. Checks stop after 90 seconds and offer a manual retry; leaving the page cancels polling. Once healthy, the iframe has a separate 30-second loading timeout and full-window fallback. A health response and iframe load do not prove race or WebSocket functionality.
+
+`/api/game-health?game=a` (a–e only) performs one uncached, fixed-host health request, limited to eight seconds. This avoids differences in the frozen servers' health-endpoint CORS headers. No recurring keep-alive, paid plan, or gameplay changes. Only the selected game's server is checked.
+
+Validation: `node --test tests/game-health.test.mjs`; browser loading/timeout/retry flow with a disposable local health fixture; deployed preview readiness and iframe opening. All 340 frozen files still match `/tmp/kart-design-hashes.json`. Concurrent-room testing and remaining free-hour review are separate follow-up work.
