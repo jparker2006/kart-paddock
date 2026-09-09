@@ -12,3 +12,15 @@ const phoneAgent = /iPhone|iPod|Android.*Mobile/i.test(navigator.userAgent);
 const smallTouchScreen = matchMedia('(hover: none) and (pointer: coarse)').matches
   && Math.min(screen.width, screen.height) < 600;
 if (phoneNote) phoneNote.hidden = !(mobileSignal === true || phoneAgent || (mobileSignal === undefined && smallTouchScreen));
+
+const deviceDialog = document.querySelector('#device-dialog');
+for (const playLink of document.querySelectorAll('.game .play')) {
+  playLink.addEventListener('click', event => {
+    if (!phoneNote || phoneNote.hidden || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const proceed = document.querySelector('#device-continue');
+    proceed.href = playLink.href;
+    deviceDialog.showModal();
+  });
+}
+document.querySelector('#device-cancel')?.addEventListener('click', () => deviceDialog.close());
