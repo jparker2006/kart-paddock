@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-09T10:28:30.185Z",
+  "mode": "production WebSocket clients, sequential games, max six concurrent clients, two rooms per game",
+  "results": [
+    {
+      "game": "a",
+      "clients": 6,
+      "rooms": 2,
+      "startedAt": "2026-09-09T10:25:08.538Z",
+      "racesStarted": true,
+      "sameSeatReconnect": true,
+      "pass": true,
+      "isolation": true,
+      "unexpectedDisconnects": 0,
+      "statePackets": [
+        686,
+        686,
+        629,
+        684,
+        684,
+        683
+      ],
+      "stateGapP95Ms": 96,
+      "stateGapMaxMs": 1139,
+      "note": "Synthetic state/input traffic; no full laps, rendering performance, or physical-device coverage.",
+      "elapsedSeconds": 43
+    },
+    {
+      "game": "b",
+      "clients": 6,
+      "rooms": 2,
+      "startedAt": "2026-09-09T10:25:51.622Z",
+      "racesStarted": true,
+      "sameSeatReconnect": true,
+      "pass": true,
+      "isolation": true,
+      "unexpectedDisconnects": 0,
+      "statePackets": [
+        644,
+        644,
+        605,
+        644,
+        644,
+        644
+      ],
+      "stateGapP95Ms": 101,
+      "stateGapMaxMs": 862,
+      "note": "Synthetic state/input traffic; no full laps, rendering performance, or physical-device coverage.",
+      "elapsedSeconds": 40
+    },
+    {
+      "game": "c",
+      "clients": 6,
+      "rooms": 2,
+      "startedAt": "2026-09-09T10:26:31.697Z",
+      "racesStarted": true,
+      "sameSeatReconnect": true,
+      "pass": true,
+      "isolation": true,
+      "unexpectedDisconnects": 0,
+      "statePackets": [
+        489,
+        489,
+        460,
+        489,
+        489,
+        489
+      ],
+      "stateGapP95Ms": 113,
+      "stateGapMaxMs": 340,
+      "note": "Synthetic state/input traffic; no full laps, rendering performance, or physical-device coverage.",
+      "elapsedSeconds": 41
+    },
+    {
+      "game": "d",
+      "clients": 6,
+      "rooms": 2,
+      "startedAt": "2026-09-09T10:27:12.276Z",
+      "racesStarted": true,
+      "sameSeatReconnect": true,
+      "pass": true,
+      "isolation": true,
+      "unexpectedDisconnects": 0,
+      "statePackets": [
+        489,
+        489,
+        446,
+        490,
+        489,
+        490
+      ],
+      "stateGapP95Ms": 109,
+      "stateGapMaxMs": 1895,
+      "note": "Synthetic state/input traffic; no full laps, rendering performance, or physical-device coverage.",
+      "elapsedSeconds": 42
+    },
+    {
+      "game": "e",
+      "clients": 6,
+      "rooms": 2,
+      "startedAt": "2026-09-09T10:27:54.763Z",
+      "racesStarted": true,
+      "pass": false,
+      "error": "Timeout: disconnect visible to peer",
+      "clientErrors": [
+        {
+          "index": 0,
+          "errors": [],
+          "disconnects": []
+        },
+        {
+          "index": 1,
+          "errors": [],
+          "disconnects": []
+        },
+        {
+          "index": 2,
+          "errors": [],
+          "disconnects": []
+        },
+        {
+          "index": 3,
+          "errors": [],
+          "disconnects": []
+        },
+        {
+          "index": 4,
+          "errors": [],
+          "disconnects": []
+        },
+        {
+          "index": 5,
+          "errors": [],
+          "disconnects": []
+        }
+      ],
+      "elapsedSeconds": 35
+    }
+  ]
+}
