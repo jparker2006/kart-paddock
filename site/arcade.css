@@ -21,3 +21,5 @@ body:has(dialog[open]){overflow:hidden}
 
 /* Motion enhances visible, usable defaults; no hidden-until-JS content. */
 .screenshot-window{overflow:hidden;aspect-ratio:16/9}.screenshot-window .screenshot{height:100%}.model h3,.community-model{overflow:hidden}.reveal-name{display:inline-block;vertical-align:bottom}.view-tabs{position:relative}.motion-tabs button[aria-selected=true]{border-bottom-color:transparent}.tab-indicator{position:absolute;left:0;bottom:0;width:1px;height:2px;background:var(--blue);transform-origin:left center;pointer-events:none}.motion-dialog{animation:none!important}.rating-stars span{display:block}.rating-submit .rating-saved:disabled{color:#182211;background:var(--blue)}.bar-fill{width:100%;transform:scaleX(0);transition:none}.results{animation:none}
+
+.home-page{padding-bottom:36px}
