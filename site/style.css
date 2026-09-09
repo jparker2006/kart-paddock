@@ -7,3 +7,5 @@
 @media(min-width:1000px){.games{grid-template-columns:repeat(2,minmax(0,1fr))}.game-title{padding:18px 16px}.game-title h2{font-size:20px}.results{padding:20px 16px}.results dd{font-size:22px}.results dl{gap:8px}}@media(min-width:701px) and (max-width:999px){.games{grid-template-columns:1fr;max-width:680px;margin:auto}}.run-caveat{font-size:11px;color:var(--muted);margin-top:14px}
 
 .prompt-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.copy-prompt{border:1px solid var(--line);background:var(--white);color:var(--ink)}.copy-prompt:hover{background:#e9eff4}.copy-prompt:disabled{opacity:.65;cursor:wait}#copy-status{flex-basis:100%;font-size:12px;color:var(--muted)}#copy-status:empty{display:none}
+
+.results dl{grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
