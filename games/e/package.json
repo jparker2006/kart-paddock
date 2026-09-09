@@ -1,0 +1,40 @@
+{
+  "name": "gemini-kart",
+  "version": "1.0.0",
+  "description": "HyperKart: Nebula Drift - Browser-based online 3D kart-racing game",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/run-dev.js",
+    "dev:client": "node scripts/run-client.js",
+    "dev:server": "node scripts/run-server.js",
+    "build": "node scripts/run-build.js",
+    "build:client": "node ./node_modules/typescript/bin/tsc -p tsconfig.client.json && node ./node_modules/vite/bin/vite.js build",
+    "build:server": "node ./node_modules/typescript/bin/tsc -p tsconfig.server.json",
+    "start": "node dist/server/index.js",
+    "preview": "node scripts/run-preview.js",
+    "test": "node test/run-all-tests.js"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "17.4.2",
+    "express": "4.21.2",
+    "socket.io": "4.8.3",
+    "socket.io-client": "4.8.3",
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.19",
+    "@types/express": "5.0.0",
+    "@types/node": "26.5.0",
+    "@types/three": "0.185.4",
+    "concurrently": "10.0.5",
+    "puppeteer-core": "^25.10.0",
+    "tsx": "4.23.13",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  }
+}
