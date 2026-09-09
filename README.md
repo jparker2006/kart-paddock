@@ -1,8 +1,8 @@
 # Kart Paddock
 
-A small three-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
+A small four-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
 
-The games are copies of the frozen Astra, Fable, and GLM submissions. No gameplay code is modified. The static Vercel output contains only the launcher and compiled clients; source, run records, and backend code are not uploaded to the public site.
+The games are copies of the frozen Astra, Fable, GLM, and Muse submissions. No gameplay code is modified. The static Vercel output contains only the launcher and compiled clients; source, run records, and backend code are not uploaded to the public site.
 
 ## Deployment
 
@@ -39,3 +39,9 @@ For launcher-only changes, run `npm run assemble` and then `vercel deploy --preb
 GLM-5.3-Flash via OpenCode 1.18.29/OpenRouter, High. Added at `/play/c/` and `/games/c/`; backend https://kart-paddock-c.onrender.com. Source commit `3750dca4aadc25ee34aa7f7639984748fada4e47` is frozen unchanged. Its screenshot is from the original run. Include `GAME_C_SERVER_URL` when rebuilding all games.
 
 GLM reveals 71.49M tokens, $1.78 OpenCode-recorded cost (not invoice verified), and 5h 26m adjusted elapsed. Detail notes disclose two continuation prompts and exclude an evidenced permission wait including overnight low-power sleep; ordinary testing remains included. This cost differs in basis from Astra/Fable API estimates. Deployment checks and limitations are recorded in DEPLOYMENT-STATUS.json.
+
+## Cinder Peak Rally
+
+Muse Spark 1.3 via OpenCode 1.18.29, High, contributor-free provider. One prompt, 9,464,673 recorded tokens, 1h 4m 26s elapsed, $0 recorded free-provider cost (not an API equivalent). Frozen manifest and audit live in organizer `../experiment-notes/runs/muse-01/`. Game paths: `/play/d/`, `/games/d/`; persistent free backend: https://kart-paddock-d.onrender.com. Supply `GAME_D_SERVER_URL` when rebuilding all games.
+
+Three-player deployed startup passed. Browser tabs share the game session via localStorage, so separate-browser reconnect needs further verification; a same-browser reload returned to the race while the old player remained marked disconnected. No gameplay repair was made. Full check details are in DEPLOYMENT-STATUS.json.

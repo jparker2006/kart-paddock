@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T23:37:09.115502+00:00",
+  "updatedAt": "2026-09-09T02:29:09.120852+00:00",
   "status": "DEPLOYED_AND_SMOKE_TESTED",
   "privateRepository": "https://github.com/jparker2006/kart-paddock",
   "vercelDeployed": true,
@@ -21,7 +21,7 @@
   "publicArtifactChecks": {
     "index.html": {
       "matchesLocal": true,
-      "bytes": 5773
+      "bytes": 7143
     },
     "prompt.md": {
       "matchesLocal": true,
@@ -33,7 +33,7 @@
     },
     "reveal.js": {
       "matchesLocal": true,
-      "bytes": 471
+      "bytes": 482
     },
     "prompt/index.html": {
       "matchesLocal": true,
@@ -42,6 +42,10 @@
     "assets/parcel-panic.png": {
       "matchesLocal": true,
       "bytes": 124025
+    },
+    "assets/cinder-peak-rally.png": {
+      "matchesLocal": true,
+      "bytes": 133161
     },
     "assets/bumble-rally.png": {
       "matchesLocal": true,
@@ -59,6 +63,14 @@
       "matchesLocal": true,
       "bytes": 6153
     },
+    "games/d/index.html": {
+      "matchesLocal": true,
+      "bytes": 4788
+    },
+    "games/d/favicon.svg": {
+      "matchesLocal": true,
+      "bytes": 268
+    },
     "games/b/index.html": {
       "matchesLocal": true,
       "bytes": 764
@@ -74,6 +86,14 @@
     "games/b/assets/index-Dsr1C2jM.js": {
       "matchesLocal": true,
       "bytes": 676024
+    },
+    "games/d/assets/index-Bao-7sa5.css": {
+      "matchesLocal": true,
+      "bytes": 4313
+    },
+    "games/d/assets/index-VeGuqMrK.js": {
+      "matchesLocal": true,
+      "bytes": 625264
     },
     "games/c/assets/index-B1jg0i9v.css": {
       "matchesLocal": true,
@@ -99,6 +119,10 @@
       "matchesLocal": true,
       "bytes": 553
     },
+    "play/d/index.html": {
+      "matchesLocal": true,
+      "bytes": 568
+    },
     "play/b/index.html": {
       "matchesLocal": true,
       "bytes": 553
@@ -123,6 +147,13 @@
       "deployId": "dep-dag9m3h5efls73a1f51g",
       "plan": "free",
       "sourceCommit": "004ec5ee0ba0c25088b17527314983e96fa70dd4"
+    },
+    "d": {
+      "url": "https://kart-paddock-d.onrender.com",
+      "serviceId": "srv-dagc6hek1f9s73apegk0",
+      "deployId": "dep-dagc6hmk1f9s73apej8g",
+      "plan": "free",
+      "sourceCommit": "50686e7d43288e923de92e36aa613a7d0fc15283"
     }
   },
   "sourceCommit": "33102cc5b7c85f2c2d970d382d10f8eadd59c22b",
@@ -132,7 +163,7 @@
     "Fable briefly displayed stale-update warning during startup; it cleared and race updates/rejoin succeeded",
     "Render Free may idle, cold-start, restart, or hit shared free limits"
   ],
-  "launcherDeploymentId": "dpl_Ca66KtAFG1fNGMpy2QL63jGm9f7g",
+  "launcherDeploymentId": "dpl_5WD6Y6BXapfMJo878pFET8kAGg7b",
   "launcherRedesign": {
     "gameFilesHashChecked": 65,
     "gameFilesChanged": 0,
@@ -164,5 +195,23 @@
       "No complete human-driven race or latency benchmark",
       "Responsive override returned 1280px; phone viewport not independently verified"
     ]
+  },
+  "cinderPeakRally": {
+    "frozenFiles": 31,
+    "changedFiles": 0,
+    "verified": [
+      "Clean npm ci and production client/server type-check/build",
+      "Public health returns ok",
+      "Framed and standalone nested frontend loads",
+      "Three distinct players joined room 894N and started a race",
+      "Four-card layout, reveal and free-provider cost labels",
+      "All published files match local build"
+    ],
+    "limitations": [
+      "Same-browser tabs share a stored player session; initialize clients before joining to test distinct players",
+      "Reload returned to race but Racer Three remained disconnected in standings; same-browser storage can change the resumed identity. Separate-browser reconnect not verified",
+      "No independent full-race, room-isolation, mobile, or three-physical-computer check this turn"
+    ],
+    "sourceScreenshot": "Frozen test/evidence/race.png"
   }
 }
