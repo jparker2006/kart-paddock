@@ -21,5 +21,10 @@
     "Text contrast ratios 7.47 or higher for primary text pairs",
     "Preview fixtures removed; public votes untouched"
   ],
-  "deployment": "Pending"
+  "deployment": {
+    "id": "dpl_BF7dgUe7uA7LwyBHrreMTEq9Gev2",
+    "url": "https://kart-paddock.vercel.app",
+    "publishedFilesMatched": 10,
+    "liveTabsVerified": true
+  }
 }
