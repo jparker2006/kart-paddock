@@ -101,5 +101,10 @@
     "Emulated iPhone gets animated play warning and cancel works"
   ],
   "publicTestVotesCreated": 0,
-  "deployment": "pending"
+  "deployment": {
+    "id": "dpl_GY98wPYV8dHdhbuzLYJg7nYhyNvF",
+    "url": "https://kart-paddock.vercel.app",
+    "verifiedArtifactCount": 12,
+    "liveRevealTabsDialogVerified": true
+  }
 }
