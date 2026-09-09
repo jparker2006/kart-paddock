@@ -1,8 +1,8 @@
 # Kart Paddock
 
-A small four-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. The page does not provide rankings.
+A five-game playtest launcher. Builder identities are hidden until Reveal models is pressed. These early a/b route labels are not the final five-entry blind assignment. Community ratings are available without login; games need five ratings to receive a leaderboard rank.
 
-The games are copies of the frozen Astra, Fable, GLM, and Muse submissions. No gameplay code is modified. The static Vercel output contains only the launcher and compiled clients; source, run records, and backend code are not uploaded to the public site.
+The games are copies of the frozen Astra, Fable, GLM, Muse, and Gemini submissions. No gameplay code is modified. The public static output contains the launcher and compiled clients. A server-only Vercel Function handles ratings; database credentials and game backend source are not public assets.
 
 ## Deployment
 
@@ -30,7 +30,7 @@ Official hosting references: [Render WebSockets](https://render.com/docs/websock
 
 ## Launcher update
 
-The cards use screenshots copied from the original runs. Reveal models shows elapsed time, total tokens, and estimated standard API cost, with cache accounting and pricing sources under About these numbers. Estimates are not subscription invoices. Run metrics come from the organizer record `../experiment-notes/RUN-USAGE.json`.
+The cards use screenshots copied from the original runs. Reveal models shows the harness, total tokens, and cost with its recorded or estimated basis, with cache accounting and pricing sources under About these numbers. Estimates are not subscription invoices. Run metrics come from the organizer record `../experiment-notes/RUN-USAGE.json`.
 
 For launcher-only changes, run `npm run assemble` and then `vercel deploy --prebuilt --prod --yes --scope jparker2006s-projects`. This preserves existing game builds. The September 7 redesign checked 65 game source and compiled-file hashes unchanged and verified all 14 published artifacts against local output. Current deployment details are in DEPLOYMENT-STATUS.json.
 
@@ -45,3 +45,7 @@ GLM reveals 71.49M tokens, $1.78 OpenCode-recorded cost (not invoice verified), 
 Muse Spark 1.3 via OpenCode 1.18.29, High, contributor-free provider. One prompt, 9,464,673 recorded tokens, 1h 4m 26s elapsed, $0 recorded free-provider cost (not an API equivalent). Frozen manifest and audit live in organizer `../experiment-notes/runs/muse-01/`. Game paths: `/play/d/`, `/games/d/`; persistent free backend: https://kart-paddock-d.onrender.com. Supply `GAME_D_SERVER_URL` when rebuilding all games.
 
 Three-player deployed startup passed. Browser tabs share the game session via localStorage, so separate-browser reconnect needs further verification; a same-browser reload returned to the race while the old player remained marked disconnected. No gameplay repair was made. Full check details are in DEPLOYMENT-STATUS.json.
+
+## Community ratings
+
+Anonymous editable 1–5-star ratings, shared statistics, and five-vote leaderboard eligibility are backed by Neon Free. See [ratings setup and verification](RATINGS.md) and [the implementation spec](specs/community-ratings.md). Launcher-only releases use `npm ci`, `npm run assemble`, and `vercel deploy --prebuilt --prod --yes`; do not rebuild or change frozen games.

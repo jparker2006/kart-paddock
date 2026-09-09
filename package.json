@@ -3,6 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "assemble": "node scripts/assemble.mjs"
+    "assemble": "node scripts/assemble.mjs",
+    "dev:ratings": "node --env-file=.env.ratings.local scripts/dev-ratings.mjs",
+    "db:migrate": "node --env-file=.env.ratings.local scripts/migrate-ratings.mjs",
+    "test:ratings": "node --env-file=.env.ratings.local --test tests/ratings.test.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

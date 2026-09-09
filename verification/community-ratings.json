@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-09",
+  "sourceBaselineFiles": 285,
+  "changedFrozenFiles": [],
+  "apiTests": {
+    "passed": 9,
+    "failed": 0,
+    "database": "real Neon, isolated test namespace"
+  },
+  "preview": "https://kart-paddock-b8s59jo1z-jparker2006s-projects.vercel.app",
+  "browserVerified": [
+    "Save and edit persist without increasing count",
+    "Reload restores saved choice",
+    "Independent localhost and 127.0.0.1 browser identities share aggregates, not votes",
+    "Real deployed preview POST saved Harvest Rush 2 stars",
+    "Five-vote eligibility and two exact 3.0 averages share rank 1",
+    "One-vote game shows Early results without rank",
+    "Server stopped: failed save retains choice; restart and retry saves without duplicate",
+    "Player dialog keyboard arrow selection and Enter save",
+    "Model reveal preserves ratings and hidden identities before reveal",
+    "390px viewport has no horizontal overflow; distribution expands",
+    "Reduced-motion emulation reports true and bar transition 0s"
+  ],
+  "production": "Pending deployment"
+}
