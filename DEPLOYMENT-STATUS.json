@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T02:29:09.120852+00:00",
+  "updatedAt": "2026-09-09T08:03:00Z",
   "status": "DEPLOYED_AND_SMOKE_TESTED",
   "privateRepository": "https://github.com/jparker2006/kart-paddock",
   "vercelDeployed": true,
@@ -21,7 +21,7 @@
   "publicArtifactChecks": {
     "index.html": {
       "matchesLocal": true,
-      "bytes": 7143
+      "bytes": 9878
     },
     "prompt.md": {
       "matchesLocal": true,
@@ -29,11 +29,11 @@
     },
     "style.css": {
       "matchesLocal": true,
-      "bytes": 6869
+      "bytes": 7276
     },
     "reveal.js": {
       "matchesLocal": true,
-      "bytes": 482
+      "bytes": 493
     },
     "prompt/index.html": {
       "matchesLocal": true,
@@ -126,6 +126,18 @@
     "play/b/index.html": {
       "matchesLocal": true,
       "bytes": 553
+    },
+    "play/e/index.html": {
+      "matchesLocal": true,
+      "bytes": 586
+    },
+    "games/e/index.html": {
+      "matchesLocal": true,
+      "bytes": 7928
+    },
+    "assets/hyperkart-nebula-drift.png": {
+      "matchesLocal": true,
+      "bytes": 29841
     }
   },
   "backends": {
@@ -154,16 +166,23 @@
       "deployId": "dep-dagc6hmk1f9s73apej8g",
       "plan": "free",
       "sourceCommit": "50686e7d43288e923de92e36aa613a7d0fc15283"
+    },
+    "e": {
+      "url": "https://kart-paddock-e.onrender.com",
+      "serviceId": "srv-dagh1n3l550s73bkp730",
+      "deployId": "dep-dagh1njl550s73bkp7i0",
+      "plan": "free",
+      "sourceCommit": "4b1001eaef63b88021e48633cc0b6f57868698e8"
     }
   },
-  "sourceCommit": "33102cc5b7c85f2c2d970d382d10f8eadd59c22b",
+  "sourceCommit": "2f8ade5",
   "limitations": [
     "Smoke tests used three browser tabs on one Mac, not three physical computers",
     "No complete human-driven race or latency benchmark performed",
     "Fable briefly displayed stale-update warning during startup; it cleared and race updates/rejoin succeeded",
     "Render Free may idle, cold-start, restart, or hit shared free limits"
   ],
-  "launcherDeploymentId": "dpl_5WD6Y6BXapfMJo878pFET8kAGg7b",
+  "launcherDeploymentId": "dpl_C616kJ4Z9D3vBaBspXDysCpGzWap",
   "launcherRedesign": {
     "gameFilesHashChecked": 65,
     "gameFilesChanged": 0,
@@ -213,5 +232,30 @@
       "No independent full-race, room-isolation, mobile, or three-physical-computer check this turn"
     ],
     "sourceScreenshot": "Frozen test/evidence/race.png"
+  },
+  "hyperKart": {
+    "frozenFiles": 39,
+    "changedFiles": 0,
+    "verified": [
+      "Clean install and production build",
+      "Public health endpoint",
+      "Nested frontend and iframe load",
+      "Three public preview clients joined room 6AX4A and started race",
+      "Third client refreshed and resumed race",
+      "Live published files match assembled build"
+    ],
+    "limitations": [
+      "No complete human-driven race",
+      "Three browser tabs on one Mac, not three physical devices",
+      "Original gameplay defects preserved"
+    ],
+    "metrics": "../experiment-notes/runs/gemini-01/metrics.json"
+  },
+  "presentation": {
+    "timeOnCards": false,
+    "timingRetainedInNotes": true,
+    "museActualUSD": 0,
+    "museStandardEstimateUSD": 2.14685385,
+    "museContributorEstimateUSD": 0.065432328
   }
 }
