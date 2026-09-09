@@ -7,5 +7,11 @@
     "game": "Bumble Rally",
     "source": "fable-01"
   },
-  "policy": "Copied from verified frozen submissions. No gameplay edits. Environment and compilation only."
+  "policy": "Copied from verified frozen submissions. No gameplay edits. Environment and compilation only.",
+  "e": {
+    "game": "HyperKart: Nebula Drift",
+    "source": "gemini-01",
+    "files": 39,
+    "gameplayChanges": 0
+  }
 }
