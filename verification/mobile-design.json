@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-09",
+  "scope": "Presentation only; frozen games, prompt text, ratings API and voting rules unchanged",
+  "gameFilesChecked": 340,
+  "changedGameFiles": [],
+  "viewports": [
+    320,
+    390,
+    768,
+    1280
+  ],
+  "checks": [
+    "No horizontal overflow at 320, 390 and 768 pixels",
+    "Mobile and desktop visual review",
+    "Rating sheet save, edit and restored selection with real preview database",
+    "Keyboard tab switching",
+    "Model reveal and expandable run details",
+    "Prompt rendering and preserved copy/download controls",
+    "Player wrapper modal at 390px",
+    "Reduced motion: dialog animation none",
+    "Text contrast ratios 7.47 or higher for primary text pairs",
+    "Preview fixtures removed; public votes untouched"
+  ],
+  "deployment": "Pending"
+}
