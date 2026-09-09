@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-09",
+  "frozenGameFilesChecked": 340,
+  "changedFrozenGameFiles": 0,
+  "gsapVersion": "3.15.0",
+  "bundleBytes": 76127,
+  "bundleGzipBytes": 29423,
+  "labConditions": {
+    "viewport": "390x844",
+    "cpuSlowdown": 4,
+    "cacheDisabled": true,
+    "network": "localhost, no network throttle",
+    "baseline": "git 4947d62 static site, same ratings API",
+    "samplesPerVersion": 3
+  },
+  "baseline": {
+    "dclMs": [
+      123,
+      106.8,
+      109.1
+    ],
+    "loadMs": [
+      127.9,
+      111.1,
+      114.3
+    ],
+    "fcpMs": [
+      164,
+      156,
+      148
+    ],
+    "lcpMs": [
+      164,
+      156,
+      148
+    ],
+    "cls": [
+      0,
+      0,
+      0
+    ],
+    "longTasks": []
+  },
+  "animatedReturningVisit": {
+    "dclMs": [
+      120.9,
+      113,
+      111
+    ],
+    "loadMs": [
+      126.3,
+      117.4,
+      117.8
+    ],
+    "fcpMs": [
+      140,
+      136,
+      144
+    ],
+    "lcpMs": [
+      140,
+      136,
+      144
+    ],
+    "cls": [
+      0,
+      0,
+      0
+    ],
+    "longTasks": []
+  },
+  "animatedFirstVisit": {
+    "dclMs": 217.1,
+    "loadMs": 222.1,
+    "fcpMs": 180,
+    "lcpMs": 180,
+    "cls": 0,
+    "longTasksMs": [
+      106
+    ]
+  },
+  "interactionProfile": {
+    "durationSeconds": 20,
+    "frameSamples": 1200,
+    "frameP95Ms": 17.5,
+    "maxFrameMs": 33.3,
+    "longTasks": [],
+    "maxObservedEventDurationMs": 72,
+    "note": "Laboratory sample, not field INP or a physical phone benchmark."
+  },
+  "browserChecks": [
+    "Reveal/hide/reveal and tab switching under 4x CPU slowdown; correct final names and active view",
+    "Rating save 5, edit 4, blocked save 3 fails, retry 3 succeeds; count remains 1",
+    "Saved checkmark only after response; selection change restores Update rating",
+    "Escape and close button exit native rating sheet",
+    "Reduced-motion final styles cleared and names visible",
+    "Blocked motion.js: tabs, reveals and rating dialog remain usable",
+    "390px visual review and 1280px desktop; no document overflow observed",
+    "Desktop screenshot hover reaches scale 1.025",
+    "Copy icon confirms success",
+    "Emulated iPhone gets animated play warning and cancel works"
+  ],
+  "publicTestVotesCreated": 0,
+  "deployment": "pending"
+}

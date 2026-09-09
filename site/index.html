@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="Play five AI-built kart racers, then reveal the models and what each run took."><title>Kart Paddock</title><link rel="stylesheet" href="/style.css"><script defer src="/reveal.js"></script><link rel="stylesheet" href="/ratings.css"><script type="module" src="/ratings.js"></script><link rel="stylesheet" href="/arcade.css"><script defer src="/navigation.js"></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="Play five AI-built kart racers, then reveal the models and what each run took."><title>Kart Paddock</title><link rel="stylesheet" href="/style.css"><script defer src="/motion.js"></script><script defer src="/reveal.js"></script><link rel="stylesheet" href="/ratings.css"><script type="module" src="/ratings.js"></script><link rel="stylesheet" href="/arcade.css"><script defer src="/navigation.js"></script></head>
 <body><header class="site-header"><a class="brand" href="/">Kart Paddock</a><a class="prompt-link" href="/prompt/">Try the prompt ↗</a></header>
 <main><div class="intro"><div><h1>Five AIs made a racing game.</h1><p>Play their games. Pick your favorite.</p></div></div>
 <p class="device-note" id="phone-note" hidden>To play, open this site on a computer.</p>
 <div class="view-controls"><div class="view-tabs" role="tablist" aria-label="Explore"><button role="tab" id="tab-games" aria-controls="games-panel" aria-selected="true">Games</button><button role="tab" id="tab-results" aria-controls="community" aria-selected="false" tabindex="-1">Results</button></div><button id="reveal" aria-pressed="false" aria-controls="model-a model-b model-c model-d model-e run-notes community-board">Reveal models <span aria-hidden="true">↓</span></button></div>
 <section id="games-panel" role="tabpanel" aria-labelledby="tab-games"><div class="games"><article class="game">
-  <img class="screenshot" src="/assets/parcel-panic.png" alt="Parcel Panic gameplay: karts racing around an island circuit" width="1280" height="800" fetchpriority="high" decoding="async">
+  <div class="screenshot-window"><img class="screenshot" src="/assets/parcel-panic.png" alt="Parcel Panic gameplay: karts racing around an island circuit" width="1280" height="800" fetchpriority="high" decoding="async"></div>
   <div class="game-title"><h2>Parcel Panic</h2><a class="play" href="/play/a/" aria-label="Play Parcel Panic">Play</a></div>
   <div class="card-rating"><span data-score="a" aria-live="polite">No ratings yet</span><button class="rate-action" data-open-rating="a">Rate <span aria-hidden="true">☆</span></button></div><section class="results" id="model-a" aria-label="Parcel Panic model and run details" hidden>
     <div class="model"><h3>GPT-6 Astra</h3><p>Harness: <strong>Codex</strong> <span aria-hidden="true">·</span> High effort</p></div>
     <details class="run-detail"><summary>Run details</summary><dl><div><dt>Total tokens</dt><dd>7.66M</dd></div><div><dt>Est. API cost</dt><dd>$14.23</dd></div></dl>
   </details></section>
 </article><article class="game">
-  <img class="screenshot" src="/assets/bumble-rally.png" alt="Bumble Rally gameplay: karts racing around a garden circuit" width="2400" height="1646" loading="lazy" decoding="async">
+  <div class="screenshot-window"><img class="screenshot" src="/assets/bumble-rally.png" alt="Bumble Rally gameplay: karts racing around a garden circuit" width="2400" height="1646" loading="lazy" decoding="async"></div>
   <div class="game-title"><h2>Bumble Rally</h2><a class="play" href="/play/b/" aria-label="Play Bumble Rally">Play</a></div>
   <div class="card-rating"><span data-score="b" aria-live="polite">No ratings yet</span><button class="rate-action" data-open-rating="b">Rate <span aria-hidden="true">☆</span></button></div><section class="results" id="model-b" aria-label="Bumble Rally model and run details" hidden>
     <div class="model"><h3>Fable 5.1</h3><p>Harness: <strong>Claude Code</strong> <span aria-hidden="true">·</span> High effort</p></div>
     <details class="run-detail"><summary>Run details</summary><dl><div><dt>Total tokens</dt><dd>47.11M</dd></div><div><dt>Est. API cost</dt><dd>$43.90</dd></div></dl>
   </details></section>
 </article><article class="game">
-  <img class="screenshot" src="/assets/harvest-rush.png" alt="Harvest Rush gameplay: a pumpkin kart on an autumn circuit" width="2000" height="1465" loading="lazy" decoding="async">
+  <div class="screenshot-window"><img class="screenshot" src="/assets/harvest-rush.png" alt="Harvest Rush gameplay: a pumpkin kart on an autumn circuit" width="2000" height="1465" loading="lazy" decoding="async"></div>
   <div class="game-title"><h2>Harvest Rush</h2><a class="play" href="/play/c/" aria-label="Play Harvest Rush">Play</a></div>
   <div class="card-rating"><span data-score="c" aria-live="polite">No ratings yet</span><button class="rate-action" data-open-rating="c">Rate <span aria-hidden="true">☆</span></button></div><section class="results" id="model-c" aria-label="Harvest Rush model and run details" hidden>
     <div class="model"><h3>GLM-5.3-Flash</h3><p>Harness: <strong>OpenCode</strong> · High effort<br>Via OpenRouter</p></div>
@@ -27,14 +27,14 @@
     <p class="run-caveat">Resumed twice; permission wait excluded.</p>
   </details></section>
 </article><article class="game">
-<img class="screenshot" src="/assets/cinder-peak-rally.png" alt="Cinder Peak Rally gameplay: karts racing on a volcanic island circuit" width="1280" height="800" loading="lazy" decoding="async">
+<div class="screenshot-window"><img class="screenshot" src="/assets/cinder-peak-rally.png" alt="Cinder Peak Rally gameplay: karts racing on a volcanic island circuit" width="1280" height="800" loading="lazy" decoding="async"></div>
 <div class="game-title"><h2>Cinder Peak Rally</h2><a class="play" href="/play/d/" aria-label="Play Cinder Peak Rally">Play</a></div>
 <div class="card-rating"><span data-score="d" aria-live="polite">No ratings yet</span><button class="rate-action" data-open-rating="d">Rate <span aria-hidden="true">☆</span></button></div><section class="results" id="model-d" aria-label="Cinder Peak Rally model and run details" hidden>
 <div class="model"><h3>Muse Spark 1.3</h3><p>Harness: <strong>OpenCode</strong> · High effort<br>Contributor-free provider</p></div>
 <details class="run-detail"><summary>Run details</summary><dl><div><dt>Total tokens</dt><dd>9.46M</dd></div><div><dt>Actual cost</dt><dd>$0.00</dd></div><div><dt>Est. paid API</dt><dd>$2.15</dd></div></dl>
 <p class="run-caveat">Free-provider access. Standard API estimate shown; paid Contributor estimate: $0.07.</p>
 </details></section></article><article class="game">
-<img class="screenshot" src="/assets/hyperkart-nebula-drift.png" alt="HyperKart: Nebula Drift gameplay with neon karts at the starting line" width="518" height="690" loading="lazy" decoding="async">
+<div class="screenshot-window"><img class="screenshot" src="/assets/hyperkart-nebula-drift.png" alt="HyperKart: Nebula Drift gameplay with neon karts at the starting line" width="518" height="690" loading="lazy" decoding="async"></div>
 <div class="game-title"><h2>HyperKart: Nebula Drift</h2><a class="play" href="/play/e/" aria-label="Play HyperKart: Nebula Drift">Play</a></div>
 <div class="card-rating"><span data-score="e" aria-live="polite">No ratings yet</span><button class="rate-action" data-open-rating="e">Rate <span aria-hidden="true">☆</span></button></div><section class="results" id="model-e" aria-label="HyperKart model and run details" hidden>
 <div class="model"><h3>Gemini 3.8 Flash</h3><p>Harness: <strong>Antigravity</strong> · High effort</p></div>

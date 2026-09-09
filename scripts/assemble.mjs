@@ -10,3 +10,5 @@ await mkdir(fn,{recursive:true});
 await build({entryPoints:['server/ratings.mjs'],outfile:`${fn}/bundle.cjs`,bundle:true,platform:'node',target:'node24',format:'cjs',minify:true});
 await writeFile(`${fn}/index.cjs`,"module.exports=require('./bundle.cjs').default;\n");
 await writeFile(`${fn}/.vc-config.json`,JSON.stringify({runtime:'nodejs24.x',handler:'index.cjs',launcherType:'Nodejs',maxDuration:30}));
+
+await build({entryPoints:['scripts/motion.mjs'],outfile:'.vercel/output/static/motion.js',bundle:true,platform:'browser',target:'es2022',format:'iife',minify:true});
