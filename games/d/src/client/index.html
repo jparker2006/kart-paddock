@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cinder Peak Rally — an original 3D multiplayer kart racer on a volcano island." />
+    <title>Cinder Peak Rally</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <!-- Top HUD -->
+      <div id="hud" class="hidden">
+        <div id="hud-left">
+          <div id="hud-lap">LAP 1/3</div>
+          <div id="hud-pos">8th</div>
+          <div id="hud-time">0:00.0</div>
+        </div>
+        <div id="hud-center">
+          <div id="hud-message"></div>
+          <div id="hud-countdown"></div>
+          <div id="hud-wrongway" class="hidden">WRONG WAY!</div>
+        </div>
+        <div id="hud-right">
+          <div id="standings-title">STANDINGS</div>
+          <ol id="standings"></ol>
+        </div>
+        <div id="hud-bottom">
+          <div id="item-slot"><span id="item-icon">?</span><span id="item-hint">E to use</span></div>
+          <div id="boost-wrap"><div id="boost-bar"><span id="boost-fill"></span></div><span>BOOST (drift to charge)</span></div>
+          <canvas id="minimap" width="170" height="170"></canvas>
+        </div>
+      </div>
+
+      <!-- Connection banner -->
+      <div id="conn-banner" class="hidden"></div>
+
+      <!-- Screens -->
+      <div id="screen-home" class="screen">
+        <div class="panel">
+          <h1>🌋 Cinder Peak Rally</h1>
+          <p class="tagline">Volcano-island kart racing for 2–8 friends. Drift for boost, grab ember gifts, mind the lava gap!</p>
+          <label>Your name
+            <input id="input-name" maxlength="16" placeholder="e.g. Blaze" autocomplete="off" />
+          </label>
+          <div class="row">
+            <button id="btn-create">Create room</button>
+          </div>
+          <div class="divider">or join a room</div>
+          <div class="row">
+            <input id="input-code" maxlength="4" placeholder="CODE" autocomplete="off" />
+            <button id="btn-join">Join</button>
+          </div>
+          <p id="home-error" class="error"></p>
+          <details class="controls">
+            <summary>How to play</summary>
+            <ul>
+              <li><b>W / ↑</b> accelerate · <b>S / ↓</b> brake &amp; reverse</li>
+              <li><b>A D / ← →</b> steer · <b>Space</b> drift (hold + steer, release for boost)</li>
+              <li><b>E</b> use item · <b>R</b> respawn · <b>M</b> mute</li>
+              <li>3 laps. Hit ember gifts 🎁 for <b>rocket boost</b> or a <b>slick</b> to drop.</li>
+              <li>Ramp over the lava gap — too slow and you swim with the fishes. Almost.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+
+      <div id="screen-lobby" class="screen hidden">
+        <div class="panel">
+          <h2>Room <span id="lobby-code"></span></h2>
+          <p class="tagline">Share this link: <a id="lobby-link" href="#">room link</a>
+            <button id="btn-copy">Copy</button>
+          </p>
+          <ul id="lobby-players"></ul>
+          <p id="lobby-status"></p>
+          <div class="row">
+            <button id="btn-start">Start race (host)</button>
+            <button id="btn-leave" class="ghost">Leave</button>
+          </div>
+          <p id="lobby-error" class="error"></p>
+        </div>
+      </div>
+
+      <div id="screen-waiting" class="screen hidden">
+        <div class="panel">
+          <h2>Race in progress…</h2>
+          <p class="tagline">You joined mid-race. You will automatically join the next race.</p>
+          <ol id="waiting-standings"></ol>
+          <div class="row"><button id="btn-wait-leave" class="ghost">Leave room</button></div>
+        </div>
+      </div>
+
+      <div id="screen-results" class="screen hidden">
+        <div class="panel">
+          <h2>🏁 Results</h2>
+          <ol id="results-list"></ol>
+          <p id="results-note"></p>
+          <div class="row">
+            <button id="btn-rematch">Rematch (host)</button>
+            <button id="btn-to-lobby" class="ghost">Lobby</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="screen-dead" class="screen hidden">
+        <div class="panel">
+          <h2>Disconnected</h2>
+          <p class="tagline" id="dead-text">The server restarted or the room closed.</p>
+          <div class="row"><button id="btn-new-room">Back to start</button></div>
+        </div>
+      </div>
+
+      <div id="toast"></div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

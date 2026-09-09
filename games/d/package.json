@@ -1,0 +1,36 @@
+{
+  "name": "cinder-peak-rally",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cinder Peak Rally — an original browser-based 3D multiplayer kart racer (volcano island theme).",
+  "type": "module",
+  "engines": {
+    "node": "24.20.0",
+    "npm": "11.19.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n CLIENT,SERVER -c cyan,magenta \"vite --port ${CLIENT_PORT:-5173} --strictPort\" \"tsx src/server/main.ts\"",
+    "dev:client": "vite --port ${CLIENT_PORT:-5173} --strictPort",
+    "dev:server": "tsx src/server/main.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.client.json && tsc --noEmit -p tsconfig.server.json",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "tsc --noEmit -p tsconfig.client.json && vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "start": "node dist/server/server/main.js",
+    "preview": "vite preview --port ${PREVIEW_PORT:-4173} --strictPort"
+  },
+  "dependencies": {
+    "socket.io": "4.8.3",
+    "socket.io-client": "4.8.3",
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.1",
+    "@types/three": "^0.185.1",
+    "concurrently": "10.0.5",
+    "puppeteer-core": "^25.10.0",
+    "tsx": "4.23.13",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  }
+}

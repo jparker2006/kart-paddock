@@ -1,0 +1,21 @@
+{
+  "results": {
+    "room code issued": "PASS 6A2V",
+    "lobby shows 3 players": "PASS count=3",
+    "share link carries room code": "PASS http://localhost:4173/#/room/6A2V",
+    "all 3 reach racing phase": "PASS ",
+    "racers see each other (2 remotes)": "PASS A:2 B:2 C:2",
+    "karts moving on track": "PASS speeds=30.0,30.0,30.0",
+    "all connected, none stale": "PASS stale=0.3,0.3,0.3",
+    "jump ramp launched kart (airborne over lava gap)": "PASS ",
+    "bridge elevation reached (~7m)": "PASS maxY=7.3",
+    "underpass level driven (~0m)": "PASS minUnderY=0.3",
+    "race speed reaches top end": "PASS max=30.0",
+    "all 3 finished 3 laps": "PASS ",
+    "results screen lists 3 racers": "PASS rows=3",
+    "consistent results across clients": "PASS [\"Alpha\",\"Charlie\",\"Bravo\"]",
+    "rematch returns all to lobby": "PASS ",
+    "no game-breaking page errors": "PASS "
+  },
+  "errors": []
+}

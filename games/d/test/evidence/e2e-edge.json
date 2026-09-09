@@ -1,0 +1,20 @@
+{
+  "results": {
+    "separate room codes": "PASS 8WN2 vs 7Q95",
+    "second room stays in lobby during room1 race": "PASS lobby",
+    "room1 standings isolated to its racers": "PASS Alpha,Bravo",
+    "drifting earns a boost on release": "PASS speed was 15.0",
+    "item box grants rocket boost": "PASS ",
+    "item box grants droppable slick": "PASS ",
+    "backward finish-line crossing adds no lap": "PASS lap 0->0",
+    "lava fall triggers auto-respawn": "PASS ",
+    "post-fall kart back on track": "PASS onTrack=true",
+    "manual respawn works": "PASS ",
+    "reconnected player keeps slot in same race": "PASS Alpha,Bravo",
+    "lobby holds 8 racers": "PASS count=8",
+    "9th joiner rejected (room full)": "PASS Room is full (8 racers max).",
+    "all 8 racers start together": "PASS 8/8",
+    "no game-breaking page errors": "PASS "
+  },
+  "errors": []
+}
