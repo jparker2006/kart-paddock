@@ -47,5 +47,6 @@ No browser testing requires changing game backend allowed origins or gameplay. P
 - Player wrapper: arrow-key selection, Enter save, native modal controls. Narrow 390px layout had no horizontal overflow. Reduced-motion emulation returned the final score and a 0s bar transition. Desktop and narrow layouts were visually inspected.
 - All 285 files in the pre-feature frozen-game hash baseline were unchanged. No `games/` file was edited or rebuilt.
 - Preview fixtures were removed after testing. Public `community` data was never seeded. Database contained zero ratings before production release.
+- Production deployment `dpl_DJGFZiWGCcgMUsBJ7tf56gMubsub` is live at https://kart-paddock.vercel.app. Public API returned HTTP 200, `testData: false`, and zero votes for all five games. The live browser showed the empty leaderboard correctly; all eight published ratings/UI artifacts matched local bytes.
 
 This is browser and API verification on one Mac, not a test with physical independent devices or a 200-user load test. Game correctness is intentionally outside this feature. See `verification/community-ratings.json` for release evidence.

@@ -257,5 +257,16 @@
     "museActualUSD": 0,
     "museStandardEstimateUSD": 2.14685385,
     "museContributorEstimateUSD": 0.065432328
+  },
+  "communityRatings": {
+    "deployedAt": "2026-09-09",
+    "deploymentId": "dpl_DJGFZiWGCcgMUsBJ7tf56gMubsub",
+    "url": "https://kart-paddock.vercel.app",
+    "sourceCommit": "e6ccf53",
+    "storage": "Neon Free",
+    "neonProjectId": "wild-star-95018642",
+    "verification": "verification/community-ratings.json",
+    "publicTestVotes": 0,
+    "frozenFilesUnchanged": 285
   }
 }

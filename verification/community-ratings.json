@@ -21,5 +21,20 @@
     "390px viewport has no horizontal overflow; distribution expands",
     "Reduced-motion emulation reports true and bar transition 0s"
   ],
-  "production": "Pending deployment"
+  "production": {
+    "id": "dpl_DJGFZiWGCcgMUsBJ7tf56gMubsub",
+    "url": "https://kart-paddock.vercel.app",
+    "ready": true,
+    "apiStatus": 200,
+    "testData": false,
+    "ratingCounts": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "verifiedPublishedArtifacts": 8,
+    "previewFixturesRemoved": true
+  }
 }
