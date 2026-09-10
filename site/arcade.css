@@ -30,14 +30,14 @@ body:has(dialog[open]){overflow:hidden}
 .home-header{padding-top:24px;padding-bottom:24px;gap:24px;align-items:center}
 .home-header h1{margin:0;line-height:1.2}
 .home-header .brand{font-size:28px;font-weight:650;letter-spacing:-.025em;min-height:44px;display:inline-flex;align-items:center}
-.home-header nav{display:flex;align-items:center;gap:28px}
+.home-header nav{display:flex;align-items:center;gap:0 28px;flex-wrap:wrap}
 .home-header nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap}
 .home-header nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
 .home-page .device-note{margin:0 0 12px}
 @media(max-width:700px){
  .home-header{padding-top:20px;padding-bottom:16px;gap:8px;flex-wrap:wrap}
  .home-header .brand{font-size:26px}
- .home-header nav{gap:24px}
+ .home-header nav{gap:0 24px}
  .home-header nav a{font-size:12px}
 }
 @media(max-width:480px){.home-header h1{flex-basis:100%}}
