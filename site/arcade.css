@@ -26,20 +26,21 @@ body:has(dialog[open]){overflow:hidden}
 
 .model-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.source-link{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border-radius:6px;color:var(--muted);text-decoration:none}.model-heading .source-link{margin:-12px -8px -8px 0}.source-link:hover{color:var(--ink);background:var(--line)}.source-link svg{display:block}.community-source{display:none;align-items:center;gap:6px;width:auto;padding:0 12px;margin:0 0 8px -12px;font-size:12px}body[data-models-revealed=true] .community-source{display:inline-flex}
 
-/* Episode links stay light, fast, and easy to tap on a phone. */
-.episode-banner{background:var(--white);border-bottom:1px solid var(--line)}
-.episode-banner-inner{max-width:1100px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.episode-banner p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
-.episode-banner strong{color:var(--ink);font-weight:600}
-.episode-banner nav{display:flex;align-items:center;gap:20px;flex:none}
-.episode-banner a{display:inline-flex;align-items:center;gap:5px;min-height:44px;color:var(--ink);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap}
-.episode-banner a:hover{text-decoration:underline;text-underline-offset:4px}
-.episode-banner a span{color:var(--muted)}
+/* One compact header puts the games first. */
+.home-header{padding-top:24px;padding-bottom:24px;gap:24px;align-items:center}
+.home-header h1{margin:0;line-height:1.2}
+.home-header .brand{font-size:28px;font-weight:650;letter-spacing:-.025em;min-height:44px;display:inline-flex;align-items:center}
+.home-header nav{display:flex;align-items:center;gap:28px}
+.home-header nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap}
+.home-header nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.home-page .device-note{margin:0 0 12px}
 @media(max-width:700px){
- .episode-banner-inner{padding:10px 20px 2px;flex-wrap:wrap;gap:0 16px}
- .episode-banner p{flex-basis:100%;font-size:12px}
- .episode-banner a{font-size:12px}
+ .home-header{padding-top:20px;padding-bottom:16px;gap:8px;flex-wrap:wrap}
+ .home-header .brand{font-size:26px}
+ .home-header nav{gap:24px}
+ .home-header nav a{font-size:12px}
 }
+@media(max-width:480px){.home-header h1{flex-basis:100%}}
 
 /* Results: identity and score first, optional details below. */
 .community-row{padding:20px 16px 8px}
